@@ -81,51 +81,6 @@ nav ul li:hover {
 	height: auto;
 }
 
-.page-content .projects-section {
-	margin-top: 6%;
-}
-.page-content .projects-section h1 {
-	font-family: 'Oswald', sans-serif;
-	text-transform: uppercase;
-	font-size: 3vw;
-}
-.page-content .projects-section .projects {
-	display: flex;
-	flex-wrap: wrap;
-}
-.page-content .projects-section .project {
-	margin-right: 20px;
-	max-width: 195px;
-}
-.page-content .projects-section .project h4 {
-	margin: 0;
-}
-.page-content .projects-section .project .description {
-	font-size: 10px;
-}
-.page-content .projects-section .project .dates {
-	font-size: 13px;
-	color: rgb(145, 145, 145);
-}
-
-footer {
-	margin-top: 5%;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-around;
-	padding: 10px;
-	background-color: #000;
-	color: white;
-}
-footer .colonne p {
-	font-size: 12px;
-	color: #ccc;
-	cursor: pointer;
-}
-footer .colonne p:hover {
-	color: #fff;
-}
-
 @media screen and (max-width: 700px) {
 	nav {
 		justify-content: center;
@@ -137,26 +92,5 @@ footer .colonne p:hover {
 	.page-content header {
 		margin-top: 10%;
 		max-width: 100%;
-	}
-	.page-content .projects-section {
-		margin-top: 15%;
-	}
-	.page-content .projects-section h1 {
-		font-size: 1.5em;
-	}
-	.page-content .projects-section .project {
-		margin-right: 0;
-		margin-bottom: 20px;
-		max-width: 100%;
-	}
-	.page-content .projects-section .project .description {
-		font-size: 13px;
-	}
-
-	footer {
-		justify-content: flex-start;
-	}
-	footer .column {
-		width: 80%;
 	}
 }
