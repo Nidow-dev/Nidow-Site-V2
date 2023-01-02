@@ -1,25 +1,36 @@
-import { TxtAnime } from "txtanime.js";
-const txtAnim = document.querySelector(h1);
+// Récupère les éléments du DOM
+const carousel = document.querySelector('.carousel');
+const slides = document.querySelector('.slides');
+const prev = document.querySelector('.prev');
+const next = document.querySelector('.next');
 
-new Typewriter(txtAnim, {
-    // deleteSpeed: 20
-})
-.start()
-.changeDelay(20)
-.typeString('Moi c\'est Elodie GROSS')
-.pauseFor(300)
-.typeString('<strong>, Dev Full-Stack</strong>')
-.pause(1000)
-.deleteChars(13)
-.typeString('<span style="color: #27ae60"> CSS</span>!')
-.pauseFor(1000)
-.deleteChars(5)
-.typeString('<span style="color: midnight"> React</span>!')
-.pauseFor(1000)
-.deleteChars(7)
-.typeString('<span style="color: #ea39ff"> PHP</span>!')
-.pauseFor(1000)
-.deleteChars(5)
-.typeString('<span style="color: #ff6910"> Javascript</span>!')
-.pauseFor(1000)
-.start()
+// Initialise les variables
+let slideIndex = 0;
+let slideWidth = slides.firstElementChild.offsetWidth;
+let slidesLength = slides.children.length;
+
+// Affiche la première partie du carrousel
+slides.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+
+// Ajoute les écouteurs d'événements aux boutons de navigation
+prev.addEventListener('click', function() {
+  slideIndex = (slideIndex - 1 + slidesLength) % slidesLength;
+  slides.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+});
+
+next.addEventListener('click', function() {
+  slideIndex = (slideIndex + 1) % slidesLength;
+  slides.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+});
+
+// Fonction de défilement automatique
+function autoScroll() {
+  // Incrémente l'index de la partie affichée
+  slideIndex = (slideIndex + 1) % slidesLength;
+
+  // Déplace les parties pour afficher la partie suivante
+  slides.style.transform = `translateX(-${slideIndex * slideWidth}px)`;
+}
+
+// Défile le carrousel toutes les 3 secondes
+setInterval(autoScroll, 3000);
