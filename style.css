@@ -4,7 +4,7 @@ body {
 	font-family: 'Noto Sans JP', sans-serif;
 	padding: 0 2%;
 	margin: 0;
- 	 background-color: #000066;
+ 	background-color: #000066;
   	color: #ffffff;
 }
 
@@ -13,7 +13,6 @@ nav {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-	background-color: white;
 	position: sticky;
 	top: 0;
 }
