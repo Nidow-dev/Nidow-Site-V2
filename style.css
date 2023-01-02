@@ -4,8 +4,6 @@ body {
 	font-family: 'Noto Sans JP', sans-serif;
 	padding: 0 2%;
 	margin: 0;
- 	background-color: #000066;
-  	color: #ffffff;
 }
 
 nav {
@@ -13,6 +11,7 @@ nav {
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
+	background-color: white;
 	position: sticky;
 	top: 0;
 }
@@ -109,29 +108,55 @@ nav ul li:hover {
 	color: rgb(145, 145, 145);
 }
 
-.header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Aligne les éléments à droite et à gauche de l'écran */
+footer {
+	margin-top: 5%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	padding: 10px;
+	background-color: #000;
+	color: white;
+}
+footer .colonne p {
+	font-size: 12px;
+	color: #ccc;
+	cursor: pointer;
+}
+footer .colonne p:hover {
+	color: #fff;
 }
 
-.menu {
-  display: flex; /* Active la mise en forme en lignes flexibles */
-  list-style: none; /* Masque les marqueurs de liste */
-  margin: 0; /* Supprime les marges */
-  padding: 0; /* Supprime les espaces internes */
-}
+@media screen and (max-width: 700px) {
+	nav {
+		justify-content: center;
+	}
+	nav ul {
+		display: none;
+	}
 
-.menu li {
-  margin-left: 20px; /* Ajoute un espace de 20 pixels entre les éléments du menu */
-}
+	.page-content header {
+		margin-top: 10%;
+		max-width: 100%;
+	}
+	.page-content .projects-section {
+		margin-top: 15%;
+	}
+	.page-content .projects-section h1 {
+		font-size: 1.5em;
+	}
+	.page-content .projects-section .project {
+		margin-right: 0;
+		margin-bottom: 20px;
+		max-width: 100%;
+	}
+	.page-content .projects-section .project .description {
+		font-size: 13px;
+	}
 
-.menu a {
-  text-decoration: none; /* Supprime le soulignement des liens */
-  color: #ffffff; /* Couleur blanche pour les liens */
-  font-size: 16px; /* Taille de police de 16 pixels */
-}
-
-.menu a:hover {
-  color: #cccccc; /* Couleur grise pour les liens au survol */
+	footer {
+		justify-content: flex-start;
+	}
+	footer .column {
+		width: 80%;
+	}
 }
