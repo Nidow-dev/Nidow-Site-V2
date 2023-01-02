@@ -1,12 +1,26 @@
-body {
-  background-color: #000066;
-  color: #ffffff;
-}
 .header {
-  display: flex; /* Active la mise en forme en lignes flexibles */
-  align-items: center; /* Centre verticalement les éléments */
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Aligne les éléments à droite et à gauche de l'écran */
 }
 
-.avatar-container {
-  margin-right: 10px; /* Ajoute un espace de 10 pixels entre l'avatar et le titre */
+.menu {
+  display: flex; /* Active la mise en forme en lignes flexibles */
+  list-style: none; /* Masque les marqueurs de liste */
+  margin: 0; /* Supprime les marges */
+  padding: 0; /* Supprime les espaces internes */
+}
+
+.menu li {
+  margin-left: 20px; /* Ajoute un espace de 20 pixels entre les éléments du menu */
+}
+
+.menu a {
+  text-decoration: none; /* Supprime le soulignement des liens */
+  color: #ffffff; /* Couleur blanche pour les liens */
+  font-size: 16px; /* Taille de police de 16 pixels */
+}
+
+.menu a:hover {
+  color: #cccccc; /* Couleur grise pour les liens au survol */
 }
