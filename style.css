@@ -93,4 +93,28 @@ nav ul li:hover {
 		margin-top: 10%;
 		max-width: 100%;
 	}
+.carousel {
+  position: relative;
+}
+
+.slides {
+  display: flex; /* Active la mise en forme en lignes flexibles */
+}
+
+.slide {
+  flex: 1; /* Étire chaque partie pour qu'elle occupe toute la largeur du carrousel */
+  text-align: center; /* Centre le texte */
+}
+
+.prev,
+.next {
+  position: absolute; /* Positionne les boutons en absolu */
+  top: 50%; /* Centre les boutons verticalement */
+  width: auto; /* Ajuste la largeur des boutons en fonction du contenu */
+  margin-top: -22px; /* Centre les boutons horizontalement */
+  padding: 16px; /* Ajoute des espaces internes aux boutons */
+  color: white; /* Couleur blanche pour les boutons */
+  font-weight: bold; /* Gras pour les boutons */
+  font-size: 18px; /* Taille de police de 18 pixels pour les boutons */
+  transition: 0.6s ease; /* Animation de
 }
