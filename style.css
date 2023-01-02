@@ -1,15 +1,12 @@
 body {
-  background-color: #000033;
+  background-color: #000066;
   color: #ffffff;
+}
+.header {
+  display: flex; /* Active la mise en forme en lignes flexibles */
+  align-items: center; /* Centre verticalement les éléments */
 }
 
 .avatar-container {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  overflow: hidden;
-}
-
-.avatar {
-  width: 100%;
+  margin-right: 10px; /* Ajoute un espace de 10 pixels entre l'avatar et le titre */
 }
